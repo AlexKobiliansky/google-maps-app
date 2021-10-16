@@ -12,13 +12,7 @@ import PlaceDetails from '../PlaceDetails/PlaceDetails';
 
 import useStyles from './styles';
 
-const places = [
-  {name: 'First Place'},
-  {name: 'Second Place'},
-  {name: 'Third Place'},
-];
-
-const List = () => {
+const List = ({places}) => {
   const classes = useStyles();
   const [type, setType] = useState('restaurants');
   const [rating, setRating] = useState('');
@@ -33,7 +27,7 @@ const List = () => {
 
   return (
     <div className={classes.container}>
-      <Typography variant="h4">
+      <Typography variant="h6">
         Restaurants, Hotels & Attractions around you
       </Typography>
       <FormControl className={classes.formControl}>
